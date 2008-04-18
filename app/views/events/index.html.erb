@@ -1,0 +1,31 @@
+<h2>Bar/Conference Rooms</h2>
+
+<% content_tag :p do %>
+  <%= link_to 'New Event', new_event_path %>
+<% end if admin? %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Starts At</th>
+    <th>Ends At</th>
+    <th></th>
+    <% if admin? %>
+      <th></th>
+      <th></th>
+    <% end %>
+  </tr>
+
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= link_to event.name, event %></td>
+      <td><%=h event.starts_at.strftime("%I:%M %p").gsub(/^0/, "") %></td>
+      <td><%=h event.ends_at.strftime("%I:%M %p").gsub(/^0/, "") %></td>
+      <% if admin? %>
+        <td><%= link_to 'Talks', event_talks_path(event) %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

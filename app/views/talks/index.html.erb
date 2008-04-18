@@ -1,0 +1,25 @@
+<% if session[:admin] %>
+<p>
+  <%= link_to 'New Talk', new_event_talk_path(@event) %>
+</p>
+<% end %>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Speaker</th>
+    <th>Topic</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% for talk in @talks %>
+    <tr>
+      <td><%=h talk.starts_at.strftime("%I:%M %p").gsub(/^0/, "") %></td>
+      <td><%=h talk.speaker %></td>
+      <td><%=h talk.topic %></td>
+      <td><%= link_to 'Edit', edit_event_talk_path(@event, talk) %></td>
+      <td><%= link_to 'Destroy', [@event, talk], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>

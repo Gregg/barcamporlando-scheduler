@@ -1,0 +1,21 @@
+<h2>Schedule for <%= @event.name %></h2>
+
+<% content_tag :p do %>
+  <%= link_to 'Edit Talks', event_talks_path(@event) %>
+<% end if admin? %>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Speaker</th>
+    <th>Topic</th>
+  </tr>
+
+  <% @event.talks.each do |talk| %>
+    <tr>
+      <td><%=h talk.starts_at.strftime("%I:%M %p").gsub(/^0/, "") %></td>
+      <td><%=h talk.speaker %></td>
+      <td><%=h talk.topic %></td>
+    </tr>
+  <% end %>
+</table>

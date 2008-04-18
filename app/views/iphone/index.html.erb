@@ -1,0 +1,17 @@
+
+
+<%
+t = Talk.get
+t.keys.sort.each do |time|%>
+  <h1><%= time %></h1>
+<%  t[time].each do |talk|%>
+<h2><%= talk.event.name%></h2>
+<%#= talk.id%>
+<%= talk.topic%> By
+<%= talk.speaker%>
+
+<%  end
+end
+%>
+
+

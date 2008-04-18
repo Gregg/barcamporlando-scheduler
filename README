@@ -1,0 +1,5 @@
+== BarCampOrlando Schedule Application
+
+This is the schedule application we used at BarCampOrlado.  No, we didn't have people sign up for talks using the app.  We basically entered the talks into the system off of the white board, so people could be sitting in a conference room, and wouldn't have to run back to white board to figure out what talks were next.
+
+It'd be cool to add some features, like the ability to send SMS reminders 10 minutes before the current talk is over with information about the next talks.
