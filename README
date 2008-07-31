@@ -5,3 +5,5 @@ This is the schedule application we used at BarCampOrlado.  No, we didn't have p
 It'd be cool to add some features, like the ability to send SMS reminders 10 minutes before the current talk is over with information about the next talks.
 
 Also, you'll notice there are two sql files in the root directory, media_day.sql and dev_day.sql.  This corresponds to the schedule we had for BarCampOrlando dev day on April 5th, 2008, and BarCampOrlando media day on April 6th, 2008
+
+Showing Github cool stuff
