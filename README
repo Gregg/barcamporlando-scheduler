@@ -7,5 +7,3 @@ It'd be cool to add some features, like the ability to send SMS reminders 10 min
 Also, you'll notice there are two sql files in the root directory, media_day.sql and dev_day.sql.  This corresponds to the schedule we had for BarCampOrlando dev day on April 5th, 2008, and BarCampOrlando media day on April 6th, 2008
 
 Showing Github cool stuff
-
-two new lines
